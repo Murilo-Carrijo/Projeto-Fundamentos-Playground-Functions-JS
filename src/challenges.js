@@ -1,6 +1,6 @@
-// Desafio 1
-function compareTrue() {
-  // seu código aqui
+// Desafio 1 - Crie uma função usando o operador &&
+function compareTrue(value1, value2) {
+  return value1 && value2;
 }
 
 // Desafio 2
