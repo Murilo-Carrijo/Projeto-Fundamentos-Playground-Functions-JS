@@ -7,24 +7,47 @@ function compareTrue(value1, value2) {
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Desafio 3 - Crie uma função que divida a frase
+function splitSentence(text) {
+  return text.split(' ');
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Desafio 4 - Crie uma função que use concatenação de strings
+function concatName(arrText) {
+  const first = arrText[0];
+  for (let i = 0; i < arrText.length; i += 1) {
+    if ((i + 1) >= arrText.length) {
+      const last = arrText[i];
+      return `${last}, ${first}`;
+    }
+  }
 }
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+// Desafio 5 - Crie uma função que calcule a quantidade de pontos no futebol
+// Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
+function footballPoints(wins, ties) {
+  const winsPoints = wins * 3;
+  const tiesPoints = ties;
+
+  return winsPoints + tiesPoints;
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6 - Crie uma função que calcule a repetição do maior número
+function highestCount(numbers) {
+  let highestNumber = 0;
+  let cont = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > highestNumber || (highestNumber === 0 && numbers[index] < highestNumber)) {
+      highestNumber = numbers[index];
+    }
+  }
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] === highestNumber) {
+      cont += 1;
+    }
+  }
+  console.log(highestNumber, cont);
+  return cont;
 }
 
 // Desafio 7
