@@ -98,9 +98,18 @@ function triangleCheck(a, b, c) {
     return true;
   } return false;
 }
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// Desafio 13 - Crie uma função que receba um string com a informação de quantas bebidas foram consumidas e retorne a soma de 1 copo de agua para cada bebida da lista
+function hydrate(bebidas) {
+  const numberBebidas = bebidas.replace(/[^0-9]/g, '');
+  let cont = 0;
+  for (let i of numberBebidas) {
+    i = Number(i);
+    cont += i;
+  }
+  if (cont > 1) {
+    return `${cont} copos de água`;
+  }
+  return `${cont} copo de água`;
 }
 
 module.exports = {
