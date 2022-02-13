@@ -67,9 +67,24 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Desafio 8 - Crie uma função FizzBuzz
+// Para cada número do Array que seja divisível apenas por 3, apresente uma string "fizz";
+// Para cada número do Array que seja divisível apenas por 5, apresente uma string "buzz";
+// Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+// Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+
+function fizzBuzz(numbers) {
+  const result = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    if ((numbers[i] % 3 === 0) && (numbers[i] % 5 === 0)) {
+      result.push('fizzBuzz');
+    } else if (numbers[i] % 3 === 0) {
+      result.push('fizz');
+    } else if (numbers[i] % 5 === 0) {
+      result.push('buzz');
+    } else result.push('bug!');
+  }
+  return result;
 }
 
 // Desafio 9
