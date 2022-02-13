@@ -91,13 +91,13 @@ function generatePhoneNumber(numbers) {
   return phoneNumber;
 }
 
-generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 19, 4]);
+// Desafio 12 - Crie uma função de Condição de existência de um triângulo
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  if (a + b > c && a + c > b && b + c > a) {
+    return true;
+  } return false;
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
