@@ -73,21 +73,29 @@ function catAndMouse(mouse, cat1, cat2) {
 // Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
 // Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
 
-function fizzBuzz(numbers) {
-  const result = [];
-  for (let i = 0; i < numbers.length; i += 1) {
-    if ((numbers[i] % 3 === 0) && (numbers[i] % 5 === 0)) {
-      result.push('fizzBuzz');
-    } else if (numbers[i] % 3 === 0) {
-      result.push('fizz');
-    } else if (numbers[i] % 5 === 0) {
-      result.push('buzz');
-    } else result.push('bug!');
-  }
+function conditions(number) {
+  let result = '';
+  if ((number % 3 === 0) && (number % 5 === 0)) {
+    result = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    result = 'fizz';
+  } else if (number % 5 === 0) {
+    result = 'buzz';
+  } else result = 'bug!';
+
   return result;
 }
 
-// Desafio 9
+function fizzBuzz(numbers) {
+  const result = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    result.push(conditions(numbers[i]));
+  }
+  console.log(result);
+  return result;
+}
+
+// Desafio 9 - Crie uma função que Codifique e Decodifique
 function encode(code) {
   const codeA = code.replace(/a/gi, 1);
   const codeE = codeA.replace(/e/gi, 2);
